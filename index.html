@@ -16,15 +16,16 @@
 
 <body>
 
-  <!--header-->
+  <!-- header -->
   <header>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
       <div class="navbar-brand">Weather Dashboard</div>
     </nav>
   </header>
 
+  <!-- city search field -->
   <main>
-    <div class="container">
+    <div class="container-fluid">
       <div class="card">
         <div class="card-body">
           <label for="citySearch" class="searchBar">Search for a city:</label><br>
@@ -34,97 +35,94 @@
           <div class="list-group" id="cityList">
           </div>
         </div>
-        <!--Todays Weather-->
-        <div class="col-md-9">
+      </div>
+
+      <!--today's weather-->
+      <div class="container-fluid results">
+        <div class="card">
+          <div class="card-body">
+            <div class="cityName" id="cityName"></div>
+            <div class="todaysDate" id="todaysDate"></div>
+            <img class="owmIcon" id="owmIcon">
+            <div>Temperature:<span id="tempResult"></span></div><br>
+            <div>Humidity:<span id="humResult"></span></div><br>
+            <div>Wind Speed:<span id="windResult"></span></div><br>
+            <div>UV Index:<span class="uvIndex" id="uvResult"> </span></div><br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5-day forecast-->
+    <h3 class="forecast">5-day Forecast</h3>
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid days">
           <div class="row">
-            <div class="col-md-12">
-              <div class="container results">
-                <div class="card">
-                  <div class="card-body">
-                    <div class="cityName" id="cityName"></div>
-                    <div class="todaysDate" id="todaysDate"></div>
-                    <img class="owmIcon" id="owmIcon">
-                    <div>Temperature:<span id="tempResult"></span></div><br>
-                    <div>Humidity:<span id="humResult"></span></div><br>
-                    <div>Wind Speed:<span id="windResult"></span></div><br>
-                    <div>UV Index:<span class="uvIndex" id="uvResult"> </span></div><br>
-                  </div>
+            <div class="col-md-2 day">
+              <div class="card">
+                <div class="card-header">
+                  <p><strong id="date1"></strong></p>
+                </div>
+                <div class="card-body" id="day1">
+                  <img id="icon1">
+                  <p id="temp1"></p>
+                  <p id="hum1"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 day">
+              <div class="card">
+                <div class="card-header">
+                  <p><strong id="date2"></strong></p>
+                </div>
+                <div class="card-body" id="day2">
+                  <img id="icon2">
+                  <p id="temp2"></p>
+                  <p id="hum2"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 day">
+              <div class="card">
+                <div class="card-header">
+                  <p><strong id="date3"></strong></p>
+                </div>
+                <div class="card-body" id="day3">
+                  <img id="icon3">
+                  <p id="temp3"></p>
+                  <p id="hum3"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 day">
+              <div class="card">
+                <div class="card-header">
+                  <p><strong id="date4"></strong></p>
+                </div>
+                <div class="card-body" id="day4">
+                  <img id="icon4">
+                  <p id="temp4"></p>
+                  <p id="hum4"></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-2 day">
+              <div class="card">
+                <div class="card-header">
+                  <p><strong id="date5"></strong></p>
+                </div>
+                <div class="card-body" id="day5">
+                  <img id="icon5">
+                  <p id="temp5"></p>
+                  <p id="hum5"></p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <!--5-day Forecast-->
-      <div class="forecast">5-day Forecast</div>
-      <div class="row">
-        <div class="col-md-12">
-          <div class="container days">
-            <div class="row">
-              <div class="col-md-2 day">
-                <div class="card">
-                  <div class="card-header">
-                    <p><strong id="date1"></strong></p>
-                  </div>
-                  <div class="card-body" id="day1">
-                    <img id="icon1">
-                    <p id="temp1"></p>
-                    <p id="hum1"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2 day">
-                <div class="card">
-                  <div class="card-header">
-                    <p><strong id="date2"></strong></p>
-                  </div>
-                  <div class="card-body" id="day2">
-                    <img id="icon2">
-                    <p id="temp2"></p>
-                    <p id="hum2"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2 day">
-                <div class="card">
-                  <div class="card-header">
-                    <p><strong id="date3"></strong></p>
-                  </div>
-                  <div class="card-body" id="day3">
-                    <img id="icon3">
-                    <p id="temp3"></p>
-                    <p id="hum3"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2 day">
-                <div class="card">
-                  <div class="card-header">
-                    <p><strong id="date4"></strong></p>
-                  </div>
-                  <div class="card-body" id="day4">
-                    <img id="icon4">
-                    <p id="temp4"></p>
-                    <p id="hum4"></p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-md-2 day">
-                <div class="card">
-                  <div class="card-header">
-                    <p><strong id="date5"></strong></p>
-                  </div>
-                  <div class="card-body" id="day5">
-                    <img id="icon5">
-                    <p id="temp5"></p>
-                    <p id="hum5"></p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+    </div>
     </div>
     </div>
   </main>
