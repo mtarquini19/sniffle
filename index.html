@@ -26,104 +26,69 @@
   <!-- city search field -->
   <main>
     <div class="container-fluid">
-      <div class="card">
-        <div class="card-body">
+      <div class="row">
+        <div class="col-md-3">
           <label for="citySearch" class="searchBar">Search for a city:</label><br>
-          <input type="text" id="citySearch" name="citySearch" placeholder="Enter City">
+          <input type="text" id="citySearch" name="citySearch" placeholder="Enter City...">
           <button type="button" class="btn btn-sm btn-outline-primary" id="searchBtn">
             <span class="fa fa-search"></span>Search</button>
-          <div class="list-group" id="cityList">
-          </div>
+            <div class="list-group" id="cityList">
+              
+            </div>
         </div>
-      </div>
 
-      <!--today's weather-->
-      <div class="container-fluid results">
-        <div class="card">
-          <div class="card-body">
-            <div class="cityName" id="cityName"></div>
-            <div class="todaysDate" id="todaysDate"></div>
-            <img class="owmIcon" id="owmIcon">
-            <div>Temperature:<span id="tempResult"></span></div><br>
-            <div>Humidity:<span id="humResult"></span></div><br>
-            <div>Wind Speed:<span id="windResult"></span></div><br>
-            <div>UV Index:<span class="uvIndex" id="uvResult"> </span></div><br>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 5-day forecast-->
-    <h3 class="forecast">5-day Forecast</h3>
-    <div class="row">
-      <div class="col-md-12">
-        <div class="container-fluid days">
+        <!--today's weather-->
+        <div class="col-md-9">
           <div class="row">
-            <div class="col-md-2 day">
-              <div class="card">
-                <div class="card-header">
-                  <p><strong id="date1"></strong></p>
-                </div>
-                <div class="card-body" id="day1">
-                  <img id="icon1">
-                  <p id="temp1"></p>
-                  <p id="hum1"></p>
-                </div>
-              </div>
+            <div class="container results">
+              <div class="cityName" id="cityName"></div>
+              <div class="date" id="date"></div>
+              <div class="owmIcon" id="owmIcon"></div>
+              <h5 id="tempResult">Temperature: </h5>
+              <h5 id="humidResult">Humidity: </h5>
+              <h5 id="windResult">Wind Speed: </h5>
+              <h5 id="uvResult">UV Index: </h5>
             </div>
-            <div class="col-md-2 day">
-              <div class="card">
-                <div class="card-header">
-                  <p><strong id="date2"></strong></p>
-                </div>
-                <div class="card-body" id="day2">
-                  <img id="icon2">
-                  <p id="temp2"></p>
-                  <p id="hum2"></p>
-                </div>
-              </div>
+          </div>
+
+          <!-- 5-day forecast-->
+
+          <div class="forecast"></div>
+          <h2>5-Day Forecast: </h2>
+          <div class="row days">
+            <div class="col-md-2 days">
+              <div id="date1">1/1/2020</div>
+              <img id="icon">
+              <div id="temp1">80</div>
+              <div id="hum1">90%</div>
             </div>
-            <div class="col-md-2 day">
-              <div class="card">
-                <div class="card-header">
-                  <p><strong id="date3"></strong></p>
-                </div>
-                <div class="card-body" id="day3">
-                  <img id="icon3">
-                  <p id="temp3"></p>
-                  <p id="hum3"></p>
-                </div>
-              </div>
+            <div class="col-md-2 days">
+              <div id="date2">1/1/2020</div>
+              <img id="icon">
+              <div id="temp2">80</div>
+              <div id="hum2">90%</div>
             </div>
-            <div class="col-md-2 day">
-              <div class="card">
-                <div class="card-header">
-                  <p><strong id="date4"></strong></p>
-                </div>
-                <div class="card-body" id="day4">
-                  <img id="icon4">
-                  <p id="temp4"></p>
-                  <p id="hum4"></p>
-                </div>
-              </div>
+            <div class="col-md-2 days">
+              <div id="date3">1/1/2020</div>
+              <img id="icon">
+              <div id="temp3">80</div>
+              <div id="hum3">90%</div>
             </div>
-            <div class="col-md-2 day">
-              <div class="card">
-                <div class="card-header">
-                  <p><strong id="date5"></strong></p>
-                </div>
-                <div class="card-body" id="day5">
-                  <img id="icon5">
-                  <p id="temp5"></p>
-                  <p id="hum5"></p>
-                </div>
-              </div>
+            <div class="col-md-2 days">
+              <div id="date4">1/1/2020</div>
+              <img id="icon">
+              <div id="temp4">80</div>
+              <div id="hum4">90%</div>
+            </div>
+            <div class="col-md-2 days">
+              <div id="date5">1/1/2020</div>
+              <img id="icon">
+              <div id="temp5">80</div>
+              <div id="hum5">90%</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-    </div>
     </div>
   </main>
 
